@@ -736,7 +736,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton("𝚅𝙸𝙳𝙴𝙾", callback_data='video')
             ],[
             InlineKeyboardButton('𝙱𝙰𝙲𝙺', callback_data='start'),
-            InlineKeyboardButton('Next', callback_data='nxt')
+            InlineKeyboardButton('Next', callback_data='next')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)       
         await query.message.edit_text(
@@ -806,7 +806,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode='html'
         )
-    elif query.data == "nxt":
+    elif query.data == "next":
         buttons = [[
             InlineKeyboardButton('𝙲𝙾𝚅𝙸𝙳', callback_data='corona'),
             InlineKeyboardButton('𝙰𝚄𝙳𝙸𝙾-𝙱𝙾𝙾𝙺', callback_data='abook'),
