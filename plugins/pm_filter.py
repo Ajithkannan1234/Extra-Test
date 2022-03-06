@@ -83,7 +83,7 @@ async def give_filter(client, message):
 
 @Client.on_callback_query(filters.regex(r"^next"))
 async def next_page(bot, query):
-    ident, req, key, offset = query.data.split("_")
+    offset = query.data.split("_")
     ad_user = query.from_user.id
     if int(ad_user) in ADMINS:
         pass
